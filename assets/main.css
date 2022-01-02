@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --body-background: #ffffff;
+    --banner-gradient: linear-gradient(to right, #373b44, #4286f4);
+    --main-color: #4286f4;
+    --main-color-opacity: rgba(66,34,244,0.4);
+    --border-color: rgba(42,42,42,0.3);
+    /*   Text Colors   */
+    --main-text: rgba(42,42,42,0.8);
+    --sub-text: rgba(42,42,42,0.65);
+    --project-text: rgba(42,42,42,0.7);;
+}
+body{
+    background: var(--body-background);
+}
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) white;
+}
+
+/* Marche sur Chrome, Edge, et Safari */
+*::-webkit-scrollbar {
+    width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+    background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 20px;
+}
+.main_content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/***************
+# Banner Section
+****************/
+.banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.color_banner{
+    background: var(--banner-gradient);
+    width: 100%;
+    height: 270px;
+}
+.banner_content{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: flex-start;
+    padding: 50px 0;
+}
+.banner_content .profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.banner_content .profile .profile_image{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: var(--main-color) 5px 5px 15px;
+    border: 7px solid var( --main-color);
+    position: relative;
+    top: -100px;
+    margin-right: 30px;
+}
+.banner_content .profile .profile_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.banner_content .profile .profile_text h1{
+    color: var(--main-text);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.banner_content .profile .profile_text p{
+    color: var(--sub-text);
+    font-size: 18px;
+    font-weight: 600;
+}
+a.discord{
+    background: royalblue;
+}
+a.instagram{
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    margin-left: 15px;
+}
+a.facebook{
+    background: #3b5998;
+    margin-left: 15px;
+}
+a.twitter{
+    background: linear-gradient(to right, #457fca, #5691c8);
+    margin-left: 15px;
+}
+a.link{
+    display: inline-block;
+    color: #ffffff;
+    width: 20%;
+    text-align: center;
+    transition: 0.4s ease;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    z-index: 2;
+}
+a.link:hover{
+    transform: scale(1.04);
+}
+a.link i{
+    margin-right: 5px;
+    color: white;
+}
+/***************
+# About Section
+****************/
+.about, .projects{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 25px 0;
+    border-top: 1px solid var(--border-color);
+    padding: 50px 0;
+}
+.about h2, .projects h2{
+    font-size: 20px;
+    color: var(--main-text);
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+.about .social_links{
+    padding: 45px 0 15px;
+}
+.about .about_content, .projects .projects_container{
+    width: 75%;
+}
+.about .bio{
+    font-size: 16px;
+    color: var(--main-text);
+    text-align: justify;
+}
+/***************
+# Projects Section
+****************/
+.projects .projects_container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.projects .projects_container .project_card{
+    width: 45%;
+    min-height: 230px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    margin: 30px 30px 30px 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 20px 20px 0;
+}
+.projects .projects_container .project_card .logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.projects .projects_container .project_card .logo i{
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, #c31432, #240b36);
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+.projects .projects_container .project_card .description{
+    width: 80%;
+    margin-top: 30px;
+    text-align: justify;
+    font-size: 15px;
+    color: var(--sub-text);
+}
+.project_link{
+    margin-top: 20px;
+    display: inline-block;
+    color: var(--main-color);
+}
+.project_link:hover{
+    transform: scale(1.02);
+}
+/***************
+# Media Queries
+****************/
+@media (max-width: 1260px) {
+    .about, .projects{
+        flex-direction: column;
+        width: 95%;
+    }
+    .about .about_content, .projects .projects_container{
+        width: 100%;
+    }
+    .about h2, .projects h2{
+        margin: 25px 0;
+    }
+    .banner_content{
+        width: 95%;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .banner_content .profile{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .banner_content a{
+        margin-top: 25px;
+        width: 200px;
+    }
+    .banner_content .profile .profile_image{
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 860px) {
+    .projects .projects_container .project_card{
+        width: 100%;
+    }
+}
+@media (max-width: 730px) {
+    .social_links{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    a.link{
+        display: inline-block;
+        color: #ffffff;
+        width: 200px;
+        text-align: center;
+        transition: 0.4s ease;
+        border-radius: 5px;
+        padding: 10px 15px;
+        font-size: 14px;
+        z-index: 2;
+        margin: 10px 10px 10px 0;
+    }
+}
+@media (max-width: 400px) {
+    .projects .projects_container .project_card{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .projects .projects_container .project_card .description, .projects .projects_container .project_card .logo{
+        width: 100%;
+    }
+    .color_banner{
+        height: 150px;
+    }
+    a.link{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
